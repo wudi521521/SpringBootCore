@@ -1,0 +1,14 @@
+server:
+  port: 8089
+spring:
+  application:
+    name: wudi
+#debug: true  #springBoot的debug查看控制台的自动report
+##日志
+##日志的配置文件
+logging:
+  config: classpath:logback-prod.xml
+
+##日志分支
+log:
+  env: prod
