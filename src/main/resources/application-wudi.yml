@@ -3,6 +3,8 @@ server:
 spring:
   application:
     name: wudi
+  resources:
+    static-locations: classpath:/META-INF/resources/, classpath:/resources/, classpath:/static/, classpath:/public/
 #debug: true  #springBoot的debug查看控制台的自动report
 ##日志
 ##日志的配置文件
