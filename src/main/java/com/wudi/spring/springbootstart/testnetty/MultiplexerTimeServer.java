@@ -99,7 +99,7 @@ public class MultiplexerTimeServer implements Runnable {
     private void handleInput(SelectionKey key) throws Exception {
         //根据SelectionKey的操作位进行判断即可获知网络事件类型
         if (key.isValid()) {
-            //处理新接入的请求消息,
+            //处理新接入的请求消息,新接入的客户端端
             if (key.isAcceptable()) {
                 //Accept the new connection，ServerSocketChannel的accept接受客户端的连接
                 //并创建SocketChannel实例，相当于完成了TCP三次握手,TCP物理链路正式建立

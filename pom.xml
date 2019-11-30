@@ -46,6 +46,19 @@
                 </exclusion>
             </exclusions>
         </dependency>
+        <!--thymeleaf，需要注意版本型号-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+            <version>2.2.0.RELEASE</version>
+        </dependency>
+        <!--netty-->
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-all</artifactId>
+            <version>5.0.0.Alpha2</version>
+        </dependency>
+
     </dependencies>
 
     <!--这个依赖,可以将应用打成一个可执行的jar包-->
