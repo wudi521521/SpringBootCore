@@ -12,7 +12,7 @@ import java.util.Date;
 
 /**
  * @author Dillon Wu
- * @Title: TimeServerHandler
+ * @Title: EchoServerHandler
  * @Description: 对网络事件进行读写操作
  * @date 2019/11/29 23:06
  */
@@ -26,7 +26,7 @@ public class TimeServerHandler extends ChannelHandlerAdapter {
      * @throws Exception
      */
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
-        System.out.println("+++++++++  TimeServerHandler channelRead  +++++++++++++");
+        System.out.println("+++++++++  EchoServerHandler channelRead  +++++++++++++");
         ByteBuf buf = (ByteBuf) msg;
         //readableBytes方法可以获取缓冲区可读的字节数
         byte[] req = new byte[buf.readableBytes()];

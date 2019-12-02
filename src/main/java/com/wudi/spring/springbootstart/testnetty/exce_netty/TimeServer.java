@@ -13,7 +13,7 @@ import io.netty.handler.codec.string.StringDecoder;
 
 /**
  * @author Dillon Wu
- * @Title: TimeServer
+ * @Title: EchoServer
  * @Description: Netty 服务端(粘包异常案例)
  * @date 2019/11/29 22:50
  */
@@ -34,7 +34,7 @@ public class TimeServer {
             //绑定端口，同步等待成功
             ChannelFuture f = b.bind(port).sync();
 
-            System.out.println("=====TimeServer  START=====");
+            System.out.println("=====EchoServer  START=====");
             //等待服务端口监听端口关闭
             f.channel().closeFuture().sync();
 

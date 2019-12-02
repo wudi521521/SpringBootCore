@@ -10,7 +10,7 @@ import io.netty.channel.socket.nio.NioSocketChannel;
 
 /**
  * @author Dillon Wu
- * @Title: TimeClient
+ * @Title: EchoClient
  * @Description: Netty 客户端
  * @date 2019/11/30 15:31
  */

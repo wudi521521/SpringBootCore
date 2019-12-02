@@ -1,12 +1,15 @@
-package com.wudi.spring.springbootstart.testnetty.exce_netty;
+package com.wudi.spring.springbootstart.testnetty.echo_netty;
 
 import io.netty.bootstrap.Bootstrap;
+import io.netty.buffer.ByteBuf;
+import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelOption;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
+import io.netty.handler.codec.DelimiterBasedFrameDecoder;
 import io.netty.handler.codec.LineBasedFrameDecoder;
 import io.netty.handler.codec.string.StringDecoder;
 
@@ -16,7 +19,7 @@ import io.netty.handler.codec.string.StringDecoder;
  * @Description: Netty 客户端 (粘包异常案例)
  * @date 2019/11/30 15:31
  */
-public class TimeClient {
+public class EchoClient {
 
 
     public void connect(int port, String host) throws Exception {
@@ -30,9 +33,11 @@ public class TimeClient {
                     .handler(new ChannelInitializer<SocketChannel>() {
                         @Override
                         protected void initChannel(SocketChannel socketChannel) throws Exception {
-                            socketChannel.pipeline().addLast(new LineBasedFrameDecoder(1024));
+                            ByteBuf delimiter = Unpooled.copiedBuffer("$_".getBytes());
+                            socketChannel.pipeline().addLast(new DelimiterBasedFrameDecoder(1024,delimiter));
+
                             socketChannel.pipeline().addLast(new StringDecoder());
-                            socketChannel.pipeline().addLast(new TimeClientHandler());
+                            socketChannel.pipeline().addLast(new EchoClientHandler());
                         }
                     });
             //发起异步连接操作
@@ -57,6 +62,6 @@ public class TimeClient {
                 //采用默认值
             }
         }
-        new TimeClient().connect(port, "127.0.0.1");
+        new EchoClient().connect(port, "127.0.0.1");
     }
 }

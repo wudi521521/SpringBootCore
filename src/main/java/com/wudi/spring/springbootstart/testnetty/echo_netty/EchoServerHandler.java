@@ -1,4 +1,4 @@
-package com.wudi.spring.springbootstart.testnetty.exce_netty;
+package com.wudi.spring.springbootstart.testnetty.echo_netty;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
@@ -13,29 +13,24 @@ import java.util.Date;
  * @Description: 对网络事件进行读写操作
  * @date 2019/11/29 23:06
  */
-public class TimeServerHandler extends ChannelHandlerAdapter {
+public class EchoServerHandler extends ChannelHandlerAdapter {
 
-    private int counter;
-
-
+    int counter =0;
     /**
      * 读取服务响应的数据,并且响应
-     *
      * @param ctx
      * @param msg
      * @throws Exception
      */
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
         System.out.println("+++++++++  EchoServerHandler channelRead  +++++++++++++");
-        String body = (String) msg;
-        System.out.println("The time server receive order:" + body + " ; the counter is:" + ++counter);
 
-        //传递完成后进行
-        String currentTime = "QUERY TIME ORDER".equalsIgnoreCase(body) ? new Date(System.currentTimeMillis()).toString() : "BAD ORDER";
-        ByteBuf resp = Unpooled.copiedBuffer(currentTime.getBytes());
+        String body = (String)msg;
+        System.out.println("this is" +counter+"times receive client ["+body+"]");
+        body += "$_";
+        ByteBuf resp = Unpooled.copiedBuffer(body.getBytes());
         //通过ChannelHandlerContext的write方法异步发送应答消息给客户端
-        ctx.writeAndFlush(resp+"hi\\r\\ n");
-
+        ctx.write(resp);
     }
 
     /**
@@ -52,22 +47,21 @@ public class TimeServerHandler extends ChannelHandlerAdapter {
     }
 
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) {
-        System.out.println("========EchoServerHandler exceptionCaught=======");
 
+        cause.printStackTrace();
         ctx.close();
     }
 
     /**
      * 新客户端的接入
-     *
      * @param ctx
      * @throws Exception
      */
-    public void channelActive(ChannelHandlerContext ctx) throws Exception {
-        System.out.println("-----timeServerHandler  channelActive-----:" + ctx);
+    public void channelActive(ChannelHandlerContext ctx) throws Exception{
+        System.out.println("-----timeServerHandler  channelActive-----:"+ctx);
     }
 
-    public void channelInactive(ChannelHandlerContext ctx) throws Exception {
+    public void channelInactive(ChannelHandlerContext ctx) throws Exception{
 
         System.out.println("------timeServerHandler   channelInactive--------------------");
     }

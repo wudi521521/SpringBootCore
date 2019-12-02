@@ -7,7 +7,7 @@ import java.net.Socket;
 
 /**
  * @author Dillon Wu
- * @Title: TimeClient
+ * @Title: EchoClient
  * @Description: TODO
  * @date 2019/11/29 13:15
  */
@@ -21,7 +21,7 @@ public class TimeClient {
                 //采用默认值
             }
         }
-        new Thread(new TimeClientHandle("127.0.0.1", port), "TimeClient-001").start();
+        new Thread(new TimeClientHandle("127.0.0.1", port), "EchoClient-001").start();
 
     }
 }

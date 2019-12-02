@@ -9,7 +9,7 @@ import java.util.logging.Logger;
 
 /**
  * @author Dillon Wu
- * @Title: TimeClientHandler
+ * @Title: EchoClientHandler
  * @Description: TODO
  * @date 2019/11/30 15:47
  */
@@ -22,7 +22,7 @@ public class TimeClientHandler extends ChannelHandlerAdapter {
     private byte[] req;
 
     public TimeClientHandler(){
-        System.out.println("--------TimeClientHandler-----------");
+        System.out.println("--------EchoClientHandler-----------");
         req = ("QUERY TIME ORDER"+System.getProperty("line.separator")).getBytes();
     }
 
@@ -46,7 +46,7 @@ public class TimeClientHandler extends ChannelHandlerAdapter {
      * @throws Exception
      */
     public void channelRead(ChannelHandlerContext ctx,Object msg) throws Exception{
-        System.out.println("===========TimeClientHandler   channelRead=============");
+        System.out.println("===========EchoClientHandler   channelRead=============");
         ByteBuf buf = (ByteBuf) msg;
         //readableBytes方法可以获取缓冲区可读的字节数
         byte[] req = new byte[buf.readableBytes()];
