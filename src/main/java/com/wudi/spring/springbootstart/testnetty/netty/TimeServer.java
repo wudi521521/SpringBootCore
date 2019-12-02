@@ -23,18 +23,26 @@ public class TimeServer {
         EventLoopGroup workGroup = new NioEventLoopGroup();
         try{
             ServerBootstrap b = new ServerBootstrap();
-            b.group(bossGroup,workGroup)
-                    .channel(NioServerSocketChannel.class)
-                    .option(ChannelOption.SO_BACKLOG,1024)
+            b.group(bossGroup,workGroup)  //设置线程池
+                    .channel(NioServerSocketChannel.class) //设置socket工厂
+                    .option(ChannelOption.SO_BACKLOG,1024) //serverSocketChannel的设置，链接缓冲池的大小
                     .childHandler(new ChildChannelHandler());
+
+            //设置参数，TCP参数
+           // bootstrap.option(ChannelOption.SO_BACKLOG, 2048);//serverSocketchannel的设置，链接缓冲池的大小
+           // bootstrap.childOption(ChannelOption.SO_KEEPALIVE, true);//socketchannel的设置,维持链接的活跃，清除死链接
+           // bootstrap.childOption(ChannelOption.TCP_NODELAY, true);//socketchannel的设置,关闭延迟发送
             //绑定端口，同步等待成功
             ChannelFuture f=b.bind(port).sync();
+
+            System.out.println("=====TimeServer  START=====");
             //等待服务端口监听端口关闭
             f.channel().closeFuture().sync();
 
         }catch (Exception e){
 
         }finally {
+            System.out.println("#########shutdownGraceFul#############");
             //优雅退出，释放线程池资源
             bossGroup.shutdownGracefully();
             workGroup.shutdownGracefully();
@@ -50,6 +58,7 @@ public class TimeServer {
             socketChannel.pipeline().addLast(new TimeServerHandler());
         }
     }
+
 
     public static void main(String[] args) throws Exception{
         int port = 8080;

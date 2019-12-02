@@ -4,6 +4,7 @@ import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandlerAdapter;
 import io.netty.channel.ChannelHandlerContext;
+import io.netty.channel.ChannelInboundHandlerAdapter;
 
 import java.util.logging.Logger;
 
@@ -20,12 +21,18 @@ public class TimeClientHandler extends ChannelHandlerAdapter {
     private final ByteBuf firstMessage;
 
     public TimeClientHandler(){
+        System.out.println("--------TimeClientHandler-----------");
         byte[] req = "QUERY TIME ORDER".getBytes();
         firstMessage = Unpooled.buffer(req.length);
         firstMessage.writeBytes(req);
     }
 
+    public void channelActive(ChannelHandlerContext ctx){
+        ctx.writeAndFlush(firstMessage);
+    }
+
     public void channelRead(ChannelHandlerContext ctx,Object msg) throws Exception{
+        System.out.println("===========TimeClientHandler   channelRead=============");
         ByteBuf buf = (ByteBuf) msg;
         //readableBytes方法可以获取缓冲区可读的字节数
         byte[] req = new byte[buf.readableBytes()];
