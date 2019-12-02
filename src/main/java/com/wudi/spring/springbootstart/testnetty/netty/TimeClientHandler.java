@@ -27,10 +27,20 @@ public class TimeClientHandler extends ChannelHandlerAdapter {
         firstMessage.writeBytes(req);
     }
 
+    /**
+     * 激活通道，向服务端传递
+     * @param ctx
+     */
     public void channelActive(ChannelHandlerContext ctx){
         ctx.writeAndFlush(firstMessage);
     }
 
+    /**
+     * 读取服务响应的数据
+     * @param ctx
+     * @param msg
+     * @throws Exception
+     */
     public void channelRead(ChannelHandlerContext ctx,Object msg) throws Exception{
         System.out.println("===========TimeClientHandler   channelRead=============");
         ByteBuf buf = (ByteBuf) msg;

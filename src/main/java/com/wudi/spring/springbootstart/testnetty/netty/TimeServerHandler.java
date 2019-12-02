@@ -19,6 +19,12 @@ import java.util.Date;
 public class TimeServerHandler extends ChannelHandlerAdapter {
 
 
+    /**
+     * 读取服务响应的数据,并且响应
+     * @param ctx
+     * @param msg
+     * @throws Exception
+     */
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
         System.out.println("+++++++++  TimeServerHandler channelRead  +++++++++++++");
         ByteBuf buf = (ByteBuf) msg;
