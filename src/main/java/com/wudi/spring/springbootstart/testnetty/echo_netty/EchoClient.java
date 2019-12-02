@@ -35,7 +35,6 @@ public class EchoClient {
                         protected void initChannel(SocketChannel socketChannel) throws Exception {
                             ByteBuf delimiter = Unpooled.copiedBuffer("$_".getBytes());
                             socketChannel.pipeline().addLast(new DelimiterBasedFrameDecoder(1024,delimiter));
-
                             socketChannel.pipeline().addLast(new StringDecoder());
                             socketChannel.pipeline().addLast(new EchoClientHandler());
                         }
@@ -52,7 +51,6 @@ public class EchoClient {
             group.shutdownGracefully();
         }
     }
-
     public static void main(String[] args) throws Exception {
         int port = 8080;
         if (args != null && args.length > 0) {
