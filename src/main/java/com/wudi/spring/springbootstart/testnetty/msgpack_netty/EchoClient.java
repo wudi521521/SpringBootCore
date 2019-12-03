@@ -37,7 +37,7 @@ public class EchoClient {
     }
 
 
-    public void run() throws Exception {
+    public void connect() throws Exception {
         //配置客户端NIO线程组
         NioEventLoopGroup group = new NioEventLoopGroup();
 
@@ -49,10 +49,15 @@ public class EchoClient {
                     .handler(new ChannelInitializer<SocketChannel>() {
                         @Override
                         protected void initChannel(SocketChannel socketChannel) throws Exception {
+                            //这里设置通过增加包头表示报文长度的避免粘包
                             socketChannel.pipeline().addLast("frameDecoder",new LengthFieldBasedFrameDecoder(65535,0,2,0,2));
+                            //增加解码器
                             socketChannel.pipeline().addLast("msgpack decoder",new MsgpackDecoder());
+                            //这里设置读取报文的包头长度避免粘包
                             socketChannel.pipeline().addLast("frameEncoder",new LengthFieldPrepender(2));
+                            //增加编码器
                             socketChannel.pipeline().addLast("msgpack encoder",new MsgpackEncoder());
+                            //增加自定义的处理器
                             socketChannel.pipeline().addLast(new EchoClientHandler(sendNumber));
                         }
                     });
@@ -62,7 +67,7 @@ public class EchoClient {
             //等待客户端链路关闭
             f.channel().closeFuture().sync();
         } catch (Exception e) {
-
+        e.printStackTrace();
         } finally {
             //优雅退出，释放NIO线程组
             group.shutdownGracefully();
@@ -77,6 +82,6 @@ public class EchoClient {
                 //采用默认值
             }
         }
-        new EchoClient("127.0.0.1",port,100).run();
+        new EchoClient("127.0.0.1",port,100).connect();
     }
 }

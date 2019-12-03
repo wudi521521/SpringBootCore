@@ -24,21 +24,21 @@ import io.netty.handler.logging.LoggingHandler;
  * @date 2019/11/29 22:50
  */
 public class EchoServer {
-    private final int sendNumber;
 
-    public EchoServer(int sendNumber){
-        this.sendNumber = sendNumber;
+    public EchoServer(){
     }
 
     public void bind(int port) throws Exception{
         //配置服务端的NIO线程组
+        //服务端接受客户端的连接
         EventLoopGroup bossGroup = new NioEventLoopGroup();
+        //进行SocketChannel的网络读写
         EventLoopGroup workGroup = new NioEventLoopGroup();
         try{
             ServerBootstrap b = new ServerBootstrap();
             b.group(bossGroup,workGroup)  //设置线程池
                     .channel(NioServerSocketChannel.class) //设置socket工厂
-                    .option(ChannelOption.SO_BACKLOG,1024) //serverSocketChannel的设置，链接缓冲池的大小
+                    .option(ChannelOption.SO_BACKLOG,100) //serverSocketChannel的设置，链接缓冲池的大小
                     .handler(new LoggingHandler(LogLevel.INFO))
                     .childHandler(new ChannelInitializer<SocketChannel>() {
                         @Override
@@ -51,7 +51,7 @@ public class EchoServer {
                         }
                     });
 
-
+            //绑定端口,同步等待成功
             ChannelFuture f=b.bind(port).sync();
 
             System.out.println("=====EchoServer  START=====");
@@ -59,7 +59,7 @@ public class EchoServer {
             f.channel().closeFuture().sync();
 
         }catch (Exception e){
-
+            e.printStackTrace();
         }finally {
             System.out.println("#########shutdownGraceFul#############");
             //优雅退出，释放线程池资源
@@ -67,15 +67,6 @@ public class EchoServer {
             workGroup.shutdownGracefully();
         }
 
-    }
-
-    private class ChildChannelHandler extends ChannelInitializer<SocketChannel> {
-
-        @Override
-        protected void initChannel(SocketChannel socketChannel) throws Exception {
-            System.out.println("======================");
-            socketChannel.pipeline().addLast(new EchoServerHandler());
-        }
     }
 
 
@@ -86,7 +77,7 @@ public class EchoServer {
                 port = Integer.valueOf(args[0]);
             }catch (Exception e){}
         }
-        new EchoServer(100).bind(port);
+        new EchoServer().bind(port);
 
     }
 }

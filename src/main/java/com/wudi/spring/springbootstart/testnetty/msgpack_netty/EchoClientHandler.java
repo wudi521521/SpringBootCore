@@ -35,12 +35,10 @@ public class EchoClientHandler extends ChannelHandlerAdapter {
         UserInfo[] userInfos = UserInfo();
 
         for (UserInfo infoE:userInfos){
-
             ctx.write(infoE);
             //ctx.writeAndFlush(infoE);
         }
         ctx.flush();
-        System.out.println("=======channelActive end==============");
     }
 
     private UserInfo[] UserInfo(){
@@ -49,7 +47,7 @@ public class EchoClientHandler extends ChannelHandlerAdapter {
         for (int i=0;i<sendNumber;i++){
             userInfo = new UserInfo();
             userInfo.setUserId(i);
-            userInfo.setUserName("------->"+i);
+            userInfo.setUserName("---AAAA---->"+i);
             userInfos[i]=userInfo;
         }
         return userInfos;
@@ -65,7 +63,8 @@ public class EchoClientHandler extends ChannelHandlerAdapter {
         System.out.println("===========EchoClientHandler   channelRead=============");
 
         System.out.println("time receive server this is:" + msg+"; the counter is :"+(++counter));
-        ctx.write(msg);
+        //如果在ctx.write(mdg)获取到的信息有去服务器了
+        //ctx.write(msg);
     }
 
     public void exceptionCaught(ChannelHandlerContext ctx,Throwable cause){

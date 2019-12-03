@@ -24,11 +24,11 @@ public class EchoServerHandler extends ChannelHandlerAdapter {
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
         System.out.println("+++++++++  EchoServerHandler channelRead  +++++++++++++");
 
-        String body = (String)msg;
-        System.out.println("this is" +counter+"times receive client ["+body+"]");
-        ByteBuf resp = Unpooled.copiedBuffer(body.getBytes());
+
+        System.out.println("this is" +counter+"times receive client ["+msg+"]");
+        /*ByteBuf resp = Unpooled.copiedBuffer(msg.getBytes());*/
         //通过ChannelHandlerContext的write方法异步发送应答消息给客户端
-        ctx.write(resp);
+        ctx.write("已经收到信息".getBytes());
     }
 
     /**
