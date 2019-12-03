@@ -1,6 +1,7 @@
 package com.wudi.spring.springbootstart.testnetty.seri_netty;
 
 import lombok.Data;
+import org.msgpack.annotation.Message;
 
 import java.io.Serializable;
 import java.nio.ByteBuffer;
@@ -12,9 +13,15 @@ import java.nio.ByteBuffer;
  * @date 2019/12/2 18:52
  */
 @Data
-public class UserInfo implements Serializable {
+@Message
+public class UserInfo{
 
-    //private static final long serialVersionUID = 1L;
+    public UserInfo(){}
+
+    public UserInfo(String userName,int userId){
+        this.userId=userId;
+        this.userName = userName;
+    }
 
     private String userName;
 

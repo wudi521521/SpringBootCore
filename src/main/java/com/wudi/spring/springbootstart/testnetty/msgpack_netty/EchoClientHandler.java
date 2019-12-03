@@ -45,9 +45,9 @@ public class EchoClientHandler extends ChannelHandlerAdapter {
         UserInfo[] userInfos = new UserInfo[sendNumber];
         UserInfo userInfo = null;
         for (int i=0;i<sendNumber;i++){
-            userInfo = new UserInfo();
-            userInfo.setUserId(i);
-            userInfo.setUserName("---AAAA---->"+i);
+            userInfo = new UserInfo("---AAAA---->"+i,i);
+           /* userInfo.setUserId(i);
+            userInfo.setUserName("---AAAA---->"+i);*/
             userInfos[i]=userInfo;
         }
         return userInfos;
