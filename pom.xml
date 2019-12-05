@@ -70,7 +70,12 @@
             <version>4.1.0.Final</version>
             <scope>compile</scope>
         </dependency>-->
-
+       <!--ptotobuf 编码-->
+        <dependency>
+            <groupId>com.google.protobuf</groupId>
+            <artifactId>protobuf-java</artifactId>
+            <version>3.10.0</version>
+        </dependency>
     </dependencies>
 
     <!--这个依赖,可以将应用打成一个可执行的jar包-->
