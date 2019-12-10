@@ -3,6 +3,8 @@ package com.wudi.spring.springbootstart.testnetty.seri_netty;
 import lombok.Data;
 import org.msgpack.annotation.Message;
 
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
 import java.nio.ByteBuffer;
 
@@ -23,8 +25,10 @@ public class UserInfo{
         this.userName = userName;
     }
 
+    @NotBlank( message = "请输入名字字段不要为空")
     private String userName;
 
+    @Min(value = 18,message = "请输入大于18岁")
     private int userId;
 
     public byte[] codeC(){
