@@ -18,6 +18,7 @@ public class MyServer {
         EventLoopGroup workerGroup = new NioEventLoopGroup();
         try {
             ServerBootstrap serverBootstrap = new ServerBootstrap();
+            //这个handler()对应的是bossGroup,childHandler对应的是workerGroup
             serverBootstrap.group(bossGroup, workerGroup).channel(NioServerSocketChannel.class).
                     childHandler(new MyServerInitializer());
             //绑定端口号,sync()的作用是netty一直等待
