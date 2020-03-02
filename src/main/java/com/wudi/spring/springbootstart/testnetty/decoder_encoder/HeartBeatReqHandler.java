@@ -16,7 +16,7 @@ public class HeartBeatReqHandler extends ChannelHandlerAdapter {
 
     private volatile ScheduledFuture<?> heartBeat;
 
-    @Override
+
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
         NettyMessage message = (NettyMessage) msg;
         //握手成功，主动发送心跳

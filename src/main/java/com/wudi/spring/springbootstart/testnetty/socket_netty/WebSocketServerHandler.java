@@ -18,7 +18,6 @@ public class WebSocketServerHandler extends SimpleChannelInboundHandler<Object> 
     @Autowired
     private WebSocketServerHandler webSocketServerHandler;
 
-    @Override
     protected void messageReceived(ChannelHandlerContext ctx, Object msg) throws Exception {
         //传统的HTTP接入
         if(msg instanceof FullHttpRequest){
@@ -48,6 +47,11 @@ public class WebSocketServerHandler extends SimpleChannelInboundHandler<Object> 
     }
 
     public void exceptionCaught(ChannelHandlerContext ctx,Throwable cause){
+
+    }
+
+    @Override
+    protected void channelRead0(ChannelHandlerContext channelHandlerContext, Object o) throws Exception {
 
     }
 }

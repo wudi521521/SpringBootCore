@@ -20,7 +20,7 @@ public class LoginAuthRespHandler extends ChannelHandlerAdapter {
     //白名单
     private String[] whiteList = {"127.0.0.1"};
 
-    @Override
+
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
         NettyMessage message = (NettyMessage) msg;
 
@@ -64,7 +64,6 @@ public class LoginAuthRespHandler extends ChannelHandlerAdapter {
         return message;
     }
 
-    @Override
     public void channelReadComplete(ChannelHandlerContext ctx) throws Exception {
         ctx.flush();
     }

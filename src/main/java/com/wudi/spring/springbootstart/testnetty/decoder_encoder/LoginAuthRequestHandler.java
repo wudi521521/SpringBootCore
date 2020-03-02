@@ -11,7 +11,7 @@ import io.netty.channel.ChannelHandlerContext;
  */
 public class LoginAuthRequestHandler extends ChannelHandlerAdapter {
 
-    @Override
+
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
         //握手请求
         ctx.writeAndFlush(buildLoginReq());
@@ -27,7 +27,7 @@ public class LoginAuthRequestHandler extends ChannelHandlerAdapter {
         return message;
     }
 
-    @Override
+
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
         //握手应答消息
         NettyMessage message = (NettyMessage) msg;
@@ -49,7 +49,7 @@ public class LoginAuthRequestHandler extends ChannelHandlerAdapter {
 
     }
 
-    @Override
+
     public void channelReadComplete(ChannelHandlerContext ctx) throws Exception {
         ctx.flush();
     }
