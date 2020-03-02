@@ -6,6 +6,9 @@ import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.handler.codec.http.*;
 import io.netty.util.CharsetUtil;
+import lombok.extern.slf4j.Slf4j;
+
+import java.net.URI;
 
 /**
  * @author Dillon Wu
@@ -13,6 +16,7 @@ import io.netty.util.CharsetUtil;
  * @Description: 自定义处理器
  * @date 2020/3/1 23:02
  */
+@Slf4j
 public class TestHttpServerHandler extends SimpleChannelInboundHandler<HttpObject> {
 
     /**
@@ -25,7 +29,19 @@ public class TestHttpServerHandler extends SimpleChannelInboundHandler<HttpObjec
      */
     @Override
     protected void channelRead0(ChannelHandlerContext channelHandlerContext, HttpObject httpObject) throws Exception {
-       if (httpObject instanceof HttpRequest){
+       log.info("*****HttpObject class*****:"+httpObject.getClass());
+       log.info("*****ChannelHandlerContext remote address*******"+channelHandlerContext.channel().remoteAddress());
+       //Thread.sleep(8000);
+
+        if (httpObject instanceof HttpRequest){
+           HttpRequest httpRequest = (HttpRequest) httpObject;
+           log.info("*****请求的方法名****"+httpRequest.method().name());
+           URI uri = new URI(httpRequest.getUri());
+           if ("/favicon.ico".equals(uri.getPath())){
+                  log.info("***请求favicon.ico****");
+                  return;
+           }
+
            //向客户端返回的数据
            ByteBuf content = Unpooled.copiedBuffer("HelloWorld", CharsetUtil.UTF_8);
            //httpResponse是netty提供的响应客户端的response
@@ -39,5 +55,35 @@ public class TestHttpServerHandler extends SimpleChannelInboundHandler<HttpObjec
        }
 
 
+    }
+
+    @Override
+    public void channelActive(ChannelHandlerContext ctx) throws Exception {
+        log.info("******channelActive********");
+        super.channelActive(ctx);
+    }
+
+    @Override
+    public void channelRegistered(ChannelHandlerContext ctx) throws Exception {
+        log.info("*******channelRegistered********");
+        super.channelRegistered(ctx);
+    }
+
+    @Override
+    public void handlerAdded(ChannelHandlerContext ctx) throws Exception {
+        log.info("******handlerAdded********");
+        super.handlerAdded(ctx);
+    }
+
+    @Override
+    public void channelInactive(ChannelHandlerContext ctx) throws Exception {
+        log.info("*************channelInactive************");
+        super.channelInactive(ctx);
+    }
+
+    @Override
+    public void channelUnregistered(ChannelHandlerContext ctx) throws Exception {
+        log.info("*********channelUnregistered**********");
+        super.channelUnregistered(ctx);
     }
 }

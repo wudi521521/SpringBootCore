@@ -27,6 +27,7 @@ public class TestServer {
          //绑定端口
          ChannelFuture channelFuture = serverBootstrap.bind(8899).sync();
          channelFuture.channel().closeFuture().sync();
+         channelFuture.channel().close();
      }finally {
          //关闭服务
          bossGroup.shutdownGracefully();
