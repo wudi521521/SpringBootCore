@@ -21,6 +21,23 @@ public class MyClientHandler extends SimpleChannelInboundHandler<String> {
 
     }
 
+
+
+    /**
+     * 连接
+     * @param ctx
+     * @throws Exception
+     */
+    @Override
+    public void channelActive(ChannelHandlerContext ctx) throws Exception {
+        log.info("*******MyClientHandler   channelActive*******");
+       // super.channelActive(ctx);
+        ctx.writeAndFlush("来自客户端的问候");
+
+    }
+
+
+
     @Override
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
         //super.exceptionCaught(ctx, cause);

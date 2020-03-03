@@ -19,8 +19,8 @@ public class MyClient {
         try{
             Bootstrap bootstrap = new Bootstrap();
             bootstrap.group(eventExecutors).channel(NioSocketChannel.class).handler(new MyClientHandler());
-            //绑定端口
-            ChannelFuture future = bootstrap.connect("localhost", 8899);
+            //绑定端口,绑定端口号,sync()的作用是netty一直等待
+            ChannelFuture future = bootstrap.connect("localhost", 8899).sync();
             future.channel().closeFuture().sync();
         }finally {
             //完美关闭

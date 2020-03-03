@@ -13,17 +13,19 @@ import java.util.UUID;
  * @date 2020/3/2 16:54
  */
 @Slf4j
-public class MyServerHandler extends SimpleChannelInboundHandler<String>  {
+public class MyServerHandler extends SimpleChannelInboundHandler<String> {
 
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, String msg) throws Exception {
-      log.info("******远程地址********"+ctx.channel().remoteAddress()+","+msg);
-      ctx.channel().writeAndFlush("from server"+ UUID.randomUUID());
+        log.info("******远程地址********" + ctx.channel().remoteAddress() + "," + msg);
+        ctx.channel().writeAndFlush("from server" + UUID.randomUUID());
     }
+
 
     @Override
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
-        super.exceptionCaught(ctx, cause);
+        log.info("******exceptionCaught********");
+        //super.exceptionCaught(ctx, cause);
         cause.printStackTrace();
         ctx.close();
     }

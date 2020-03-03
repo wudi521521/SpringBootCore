@@ -1,5 +1,6 @@
-package com.wudi.spring.springbootstart.shengsiyuan.secondexample;
+package com.wudi.spring.springbootstart.shengsiyuan.thirdexample;
 
+import com.wudi.spring.springbootstart.shengsiyuan.secondexample.MyServerInitializer;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.EventLoopGroup;
@@ -8,11 +9,11 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 
 /**
  * @author Dillon Wu
- * @Title: 服务端
+ * @Title: MyChatServer
  * @Description: TODO
- * @date 2020/3/2 16:20
+ * @date 2020/3/3 13:01
  */
-public class MyServer {
+public class MyChatServer {
     public static void main(String[] args) throws Exception {
         EventLoopGroup bossGroup = new NioEventLoopGroup();
         EventLoopGroup workerGroup = new NioEventLoopGroup();
@@ -20,13 +21,11 @@ public class MyServer {
             ServerBootstrap serverBootstrap = new ServerBootstrap();
             //这个handler()对应的是bossGroup,childHandler对应的是workerGroup
             serverBootstrap.group(bossGroup, workerGroup).channel(NioServerSocketChannel.class).
-                    childHandler(new MyServerInitializer());
-            //绑定端口号,sync()的作用是netty一直等待
-            /*ChannelFuture future = serverBootstrap.bind(8899).sync();
-            future.channel().closeFuture().sync();*/
-            //绑定端口
+                    childHandler(new MyChatServerInitializer());
+
             ChannelFuture channelFuture = serverBootstrap.bind(8899).sync();
             channelFuture.channel().closeFuture().sync();
+            channelFuture.channel().close();
 
         } finally {
             //完美关闭
