@@ -24,7 +24,7 @@ public class MyServerInitializerB extends ChannelInitializer<SocketChannel> {
         pipeline.addLast(new ChunkedWriteHandler());
         //聚合
         pipeline.addLast(new HttpObjectAggregator(8192));
-        //ws://server:port/context_path
+        //ws://server:port/context_path,处理以含有ws的路径
         pipeline.addLast(new WebSocketServerProtocolHandler("/ws"));
         //自定义服务器
         pipeline.addLast(new TextWebSocketFrameHandler());
