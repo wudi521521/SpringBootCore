@@ -1,0 +1,19 @@
+syntax = "proto2";
+
+package com.wudi.spring.springbootstart.shengsiyuan;
+
+//默认加速
+option optimize_for = SPEED;
+
+option java_package = "com.wudi.spring.springbootstart.shengsiyuan.sixexample";
+
+//可以和这个文件名字不同
+option java_outer_classname ="MyDataInfo";
+
+message Person{
+    required string name =1;
+    optional int32 age=2;
+    optional string address=3;
+}
+
+
