@@ -19,6 +19,7 @@ import thrift.generated.PersonService;
 public class ThriftClient {
 
     public static void main(String[] args) throws Exception {
+        //客户端的协议和服务端的协议要一致
         TTransport tTransport = new TFramedTransport(new TSocket("localhost", 8899), 600);
         TProtocol protocol = new TCompactProtocol(tTransport);
         PersonService.Client client = new PersonService.Client(protocol);

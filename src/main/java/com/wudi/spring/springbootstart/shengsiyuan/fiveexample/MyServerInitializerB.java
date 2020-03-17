@@ -1,6 +1,5 @@
 package com.wudi.spring.springbootstart.shengsiyuan.fiveexample;
 
-import com.wudi.spring.springbootstart.testnetty.socket_netty.WebSocketServerHandler;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;
 import io.netty.channel.socket.SocketChannel;

@@ -31,4 +31,9 @@ public class Person {
 
     private List<Object> lists;
 
+    public static void main(String[] args) {
+        String string = "{\"id\":\"z1.0A1E1A185C9055E7F15E6B3CB43A90CD\",\"pipeline\":\"1381718371.reCodeMp3\",\"code\":0,\"desc\":\"The fop was completed successfully\",\"reqid\":\"ezgAAOdeuqcBzvsV\",\"inputBucket\":\"eblocks-space\",\"inputKey\":\"李志 - 天空之城.mp3\",\"items\":[{\"cmd\":\"avthumb/mp3/ab/128k/ar/44100/acodec/libmp3lame|saveas/ZWJsb2Nrcy1zcGFjZTpjb252ZXJ0X2U3MmMzYmRjLTA5NjctNDJhYi04MjMxLTUyY2Y0OGI3OTI0NS5tcDM=\",\"code\":0,\"desc\":\"The fop was completed successfully\",\"hash\":\"FkNFzrB1Qj3gGPWIDZSz6sApsyMM\",\"key\":\"convert_e72c3bdc-0967-42ab-8231-52cf48b79245.mp3\",\"returnOld\":0}]}";
+        System.out.println(!string.contains("callback"));
+    }
+
 }
