@@ -18,6 +18,21 @@
         <java.version>1.8</java.version>
     </properties>
 
+    <!--连接远程私服基本配置项目部署到私服配置-->
+    <distributionManagement> <!-- 远程部署管理信息 -->
+        <repository> <!--部署项目产生的构件到远程仓库需要的信息 -->
+            <id>eblocks-release</id>
+            <name>Nexus Release Repository</name>
+            <url>http://39.107.245.189:8081/nexus/content/repositories/releases/</url>
+        </repository>
+
+        <snapshotRepository> <!-- 如果没有配置该元素，默认部署到repository元素配置的仓库 -->
+            <id>eblocks-snapshots</id>
+            <name>Nexus Snapshot Repository</name>
+            <url>http://39.107.245.189:8081/nexus/content/repositories/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
     <!--这个依赖,可以将应用打成一个可执行的jar包-->
     <dependencies>
         <dependency>
@@ -88,14 +103,56 @@
             <artifactId>libthrift</artifactId>
             <version>0.13.0</version>
         </dependency>
+        <!--gRpc依赖包-->
+        <dependency>
+            <groupId>io.grpc</groupId>
+            <artifactId>grpc-netty-shaded</artifactId>
+            <version>1.28.0</version>
+        </dependency>
+        <dependency>
+            <groupId>io.grpc</groupId>
+            <artifactId>grpc-protobuf</artifactId>
+            <version>1.28.0</version>
+        </dependency>
+        <dependency>
+            <groupId>io.grpc</groupId>
+            <artifactId>grpc-stub</artifactId>
+            <version>1.28.0</version>
+        </dependency>
     </dependencies>
 
     <!--这个依赖,可以将应用打成一个可执行的jar包-->
     <build>
+        <extensions>
+            <extension>
+                <groupId>kr.motd.maven</groupId>
+                <artifactId>os-maven-plugin</artifactId>
+                <version>1.6.2</version>
+            </extension>
+        </extensions>
         <plugins>
+            <!--protobuf 编译组件-->
             <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
+                <groupId>org.xolstice.maven.plugins</groupId>
+                <artifactId>protobuf-maven-plugin</artifactId>
+                <version>0.6.1</version>
+                <configuration>
+                    <protocArtifact>com.google.protobuf:protoc:3.11.0:exe:windows-x86_64</protocArtifact>
+                    <pluginId>com.wudi.spring.springbootstart.shengsiyuan.grpc-java</pluginId>
+                    <pluginArtifact>io.grpc:protoc-gen-grpc-java:1.28.0:exe:windows-x86_64</pluginArtifact>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>compile</goal>
+                            <goal>compile-custom</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
             </plugin>
         </plugins>
     </build>
