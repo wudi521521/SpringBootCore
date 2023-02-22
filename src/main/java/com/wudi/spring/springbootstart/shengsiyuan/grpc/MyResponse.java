@@ -8,11 +8,11 @@ package com.wudi.spring.springbootstart.shengsiyuan.grpc;
  *响应
  * </pre>
  *
- * Protobuf type {@code com.wudi.spring.springbootstart.shengsiyuan.MyResponse}
+ * Protobuf type {@code com.wudi.spring.factories.springbootstart.shengsiyuan.MyResponse}
  */
 public  final class MyResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:com.wudi.spring.springbootstart.shengsiyuan.MyResponse)
+    // @@protoc_insertion_point(message_implements:com.wudi.spring.factories.springbootstart.shengsiyuan.MyResponse)
         MyResponseOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use MyResponse.newBuilder() to construct.
@@ -286,11 +286,11 @@ private static final long serialVersionUID = 0L;
    *响应
    * </pre>
    *
-   * Protobuf type {@code com.wudi.spring.springbootstart.shengsiyuan.MyResponse}
+   * Protobuf type {@code com.wudi.spring.factories.springbootstart.shengsiyuan.MyResponse}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:com.wudi.spring.springbootstart.shengsiyuan.MyResponse)
+      // @@protoc_insertion_point(builder_implements:com.wudi.spring.factories.springbootstart.shengsiyuan.MyResponse)
           MyResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -305,7 +305,7 @@ private static final long serialVersionUID = 0L;
               MyResponse.class, MyResponse.Builder.class);
     }
 
-    // Construct using com.wudi.spring.springbootstart.shengsiyuan.com.wudi.spring.springbootstart.shengsiyuan.grpc.MyResponse.newBuilder()
+    // Construct using com.wudi.spring.factories.springbootstart.shengsiyuan.com.wudi.spring.factories.springbootstart.shengsiyuan.grpc.MyResponse.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -521,10 +521,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:com.wudi.spring.springbootstart.shengsiyuan.MyResponse)
+    // @@protoc_insertion_point(builder_scope:com.wudi.spring.factories.springbootstart.shengsiyuan.MyResponse)
   }
 
-  // @@protoc_insertion_point(class_scope:com.wudi.spring.springbootstart.shengsiyuan.MyResponse)
+  // @@protoc_insertion_point(class_scope:com.wudi.spring.factories.springbootstart.shengsiyuan.MyResponse)
   private static final MyResponse DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new MyResponse();

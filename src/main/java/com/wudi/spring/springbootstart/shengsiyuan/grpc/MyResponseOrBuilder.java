@@ -4,7 +4,7 @@
 package com.wudi.spring.springbootstart.shengsiyuan.grpc;
 
 public interface MyResponseOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:com.wudi.spring.springbootstart.shengsiyuan.MyResponse)
+    // @@protoc_insertion_point(interface_extends:com.wudi.spring.factories.springbootstart.shengsiyuan.MyResponse)
     com.google.protobuf.MessageOrBuilder {
 
   /**

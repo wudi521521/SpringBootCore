@@ -33,14 +33,14 @@ public final class PersonProtoA {
       descriptor;
   static {
     String[] descriptorData = {
-      "\n\014Person.proto\022+com.wudi.spring.springbo" +
+      "\n\014Person.proto\022+com.wudi.spring.factories.springbo" +
       "otstart.shengsiyuan\"\035\n\tMyRequest\022\020\n\010user" +
       "name\030\001 \001(\t\"\036\n\nMyResponse\022\020\n\010realname\030\002 \001" +
       "(\t2\235\001\n\016StudentService\022\212\001\n\025GetRealNameByU" +
-      "sername\0226.com.wudi.spring.springbootstar" +
+      "sername\0226.com.wudi.spring.factories.springbootstar" +
       "t.shengsiyuan.MyRequest\0327.com.wudi.sprin" +
       "g.springbootstart.shengsiyuan.MyResponse" +
-      "\"\000BB\n0com.wudi.spring.springbootstart.sh" +
+      "\"\000BB\n0com.wudi.spring.factories.springbootstart.sh" +
       "engsiyuan.grpcB\014PersonProtoAP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

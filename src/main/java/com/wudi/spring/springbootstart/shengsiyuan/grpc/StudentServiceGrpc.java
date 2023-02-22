@@ -16,7 +16,7 @@ public final class StudentServiceGrpc {
 
   private StudentServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "com.wudi.spring.springbootstart.shengsiyuan.StudentService";
+  public static final String SERVICE_NAME = "com.wudi.spring.factories.springbootstart.shengsiyuan.StudentService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<MyRequest,
