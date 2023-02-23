@@ -23,11 +23,11 @@ public class SpringbootstartApplication {
 
 
 
-     /*   SpringApplication.run(SpringbootstartApplication.class, args);*/
-        SpringApplication application = new SpringApplication(SpringbootstartApplication.class);
+        SpringApplication.run(SpringbootstartApplication.class, args);
+        /*SpringApplication application = new SpringApplication(SpringbootstartApplication.class);
         //添加到初始化器
         application.addInitializers(new SecondInitializerDemo01());
-        application.run(args);
+        application.run(args);*/
     }
 
 
