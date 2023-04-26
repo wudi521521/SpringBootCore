@@ -5,16 +5,149 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="375689a0-f82a-4b39-8da8-cdc0223c5d93" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/resource/initializer/ExchangeNum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/thread/day01/BothThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/thread/day01/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/thread/day01/Thread02.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/thread/day01/ThreadStyle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/thread/day02/RightWayStopThreadWithoutSleep.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/thread/day02/RightWayStopThreadWithoutSleepWithInterrupt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/start.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/SpringBootCore.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SpringBootCore.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/d:/logs/log.log" beforeDir="false" afterPath="$PROJECT_DIR$/d:/logs/log.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wudi/spring/springbootstart/SpringbootstartApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wudi/spring/springbootstart/SpringbootstartApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen-java/thrift/generated/DataException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen-java/thrift/generated/Person.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen-java/thrift/generated/PersonService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thread/day02/RightWayStopThreadWithoutSleep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thread/day02/RightWayStopThreadWithoutSleep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wudi/spring/springbootstart/shengsiyuan/thrift/PersonServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wudi/spring/springbootstart/shengsiyuan/thrift/ThriftClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wudi/spring/springbootstart/shengsiyuan/thrift/ThriftServer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/thrift/generated/DataException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/thrift/generated/Person.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/thrift/generated/PersonService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/proto/Person.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/protobuf/Student.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/thrift/data.thrift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/spring.factories" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application-wudi.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/controller/InitializerController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/resource/initializer/FirstInitializerDemo01.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/resource/initializer/SecondInitializerDemo01.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/resource/initializer/TestInitializerComponent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/resource/initializer/ThreeInitializerDemo01.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wudi/spring/springbootstart/SpringbootstartApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wudi/spring/springbootstart/config/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wudi/spring/springbootstart/shengsiyuan/firstexample/TestHttpServerHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wudi/spring/springbootstart/shengsiyuan/firstexample/TestServer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wudi/spring/springbootstart/shengsiyuan/firstexample/TestServerInitializer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wudi/spring/springbootstart/shengsiyuan/fiveexample/MyServerB.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wudi/spring/springbootstart/shengsiyuan/fiveexample/MyServerInitializerB.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wudi/spring/springbootstart/shengsiyuan/fiveexample/TextWebSocketFrameHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wudi/spring/springbootstart/shengsiyuan/fourexample/MyServerA.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wudi/spring/springbootstart/shengsiyuan/fourexample/MyServerHandlerA$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wudi/spring/springbootstart/shengsiyuan/fourexample/MyServerHandlerA.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wudi/spring/springbootstart/shengsiyuan/fourexample/MyServerInitializerA.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wudi/spring/springbootstart/shengsiyuan/grpc/GrpcClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wudi/spring/springbootstart/shengsiyuan/grpc/GrpcServer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wudi/spring/springbootstart/shengsiyuan/grpc/MyRequest$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wudi/spring/springbootstart/shengsiyuan/grpc/MyRequest$Builder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wudi/spring/springbootstart/shengsiyuan/grpc/MyRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wudi/spring/springbootstart/shengsiyuan/grpc/MyRequestOrBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wudi/spring/springbootstart/shengsiyuan/grpc/MyResponse$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wudi/spring/springbootstart/shengsiyuan/grpc/MyResponse$Builder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wudi/spring/springbootstart/shengsiyuan/grpc/MyResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wudi/spring/springbootstart/shengsiyuan/grpc/MyResponseOrBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wudi/spring/springbootstart/shengsiyuan/grpc/PersonProtoA.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wudi/spring/springbootstart/shengsiyuan/grpc/StudentServiceGrpc$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wudi/spring/springbootstart/shengsiyuan/grpc/StudentServiceGrpc$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wudi/spring/springbootstart/shengsiyuan/grpc/StudentServiceGrpc$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wudi/spring/springbootstart/shengsiyuan/grpc/StudentServiceGrpc$MethodHandlers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wudi/spring/springbootstart/shengsiyuan/grpc/StudentServiceGrpc$StudentServiceBaseDescriptorSupplier.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wudi/spring/springbootstart/shengsiyuan/grpc/StudentServiceGrpc$StudentServiceBlockingStub.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wudi/spring/springbootstart/shengsiyuan/grpc/StudentServiceGrpc$StudentServiceFileDescriptorSupplier.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wudi/spring/springbootstart/shengsiyuan/grpc/StudentServiceGrpc$StudentServiceFutureStub.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wudi/spring/springbootstart/shengsiyuan/grpc/StudentServiceGrpc$StudentServiceImplBase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wudi/spring/springbootstart/shengsiyuan/grpc/StudentServiceGrpc$StudentServiceMethodDescriptorSupplier.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wudi/spring/springbootstart/shengsiyuan/grpc/StudentServiceGrpc$StudentServiceStub.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wudi/spring/springbootstart/shengsiyuan/grpc/StudentServiceGrpc.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wudi/spring/springbootstart/shengsiyuan/grpc/StudentServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wudi/spring/springbootstart/shengsiyuan/secondexample/MyClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wudi/spring/springbootstart/shengsiyuan/secondexample/MyClientHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wudi/spring/springbootstart/shengsiyuan/secondexample/MyClientInitializer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wudi/spring/springbootstart/shengsiyuan/secondexample/MyServer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wudi/spring/springbootstart/shengsiyuan/secondexample/MyServerHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wudi/spring/springbootstart/shengsiyuan/secondexample/MyServerInitializer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wudi/spring/springbootstart/shengsiyuan/thirdexample/MyCharClientInitializer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wudi/spring/springbootstart/shengsiyuan/thirdexample/MyChatClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wudi/spring/springbootstart/shengsiyuan/thirdexample/MyChatClientHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wudi/spring/springbootstart/shengsiyuan/thirdexample/MyChatServer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wudi/spring/springbootstart/shengsiyuan/thirdexample/MyChatServerHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wudi/spring/springbootstart/shengsiyuan/thirdexample/MyChatServerInitializer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wudi/spring/springbootstart/shengsiyuan/thrift/PersonServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wudi/spring/springbootstart/shengsiyuan/thrift/ThriftClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wudi/spring/springbootstart/shengsiyuan/thrift/ThriftServer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wudi/spring/springbootstart/test/TestInteger.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/logback-prod.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/public/test.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/resource/19in/login.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/resource/19in/login_en_US.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/resource/19in/login_zh_CN.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/resource/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/success.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/thrift/generated/DataException$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/thrift/generated/DataException$DataExceptionStandardScheme.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/thrift/generated/DataException$DataExceptionStandardSchemeFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/thrift/generated/DataException$DataExceptionTupleScheme.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/thrift/generated/DataException$DataExceptionTupleSchemeFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/thrift/generated/DataException$_Fields.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/thrift/generated/DataException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/thrift/generated/Person$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/thrift/generated/Person$PersonStandardScheme.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/thrift/generated/Person$PersonStandardSchemeFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/thrift/generated/Person$PersonTupleScheme.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/thrift/generated/Person$PersonTupleSchemeFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/thrift/generated/Person$_Fields.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/thrift/generated/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/thrift/generated/PersonService$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/thrift/generated/PersonService$AsyncClient$Factory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/thrift/generated/PersonService$AsyncClient$getPersonByUsername_call.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/thrift/generated/PersonService$AsyncClient$savePerson_call.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/thrift/generated/PersonService$AsyncClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/thrift/generated/PersonService$AsyncIface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/thrift/generated/PersonService$AsyncProcessor$getPersonByUsername$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/thrift/generated/PersonService$AsyncProcessor$getPersonByUsername.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/thrift/generated/PersonService$AsyncProcessor$savePerson$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/thrift/generated/PersonService$AsyncProcessor$savePerson.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/thrift/generated/PersonService$AsyncProcessor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/thrift/generated/PersonService$Client$Factory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/thrift/generated/PersonService$Client.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/thrift/generated/PersonService$Iface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/thrift/generated/PersonService$Processor$getPersonByUsername.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/thrift/generated/PersonService$Processor$savePerson.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/thrift/generated/PersonService$Processor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/thrift/generated/PersonService$getPersonByUsername_args$_Fields.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/thrift/generated/PersonService$getPersonByUsername_args$getPersonByUsername_argsStandardScheme.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/thrift/generated/PersonService$getPersonByUsername_args$getPersonByUsername_argsStandardSchemeFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/thrift/generated/PersonService$getPersonByUsername_args$getPersonByUsername_argsTupleScheme.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/thrift/generated/PersonService$getPersonByUsername_args$getPersonByUsername_argsTupleSchemeFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/thrift/generated/PersonService$getPersonByUsername_args.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/thrift/generated/PersonService$getPersonByUsername_result$_Fields.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/thrift/generated/PersonService$getPersonByUsername_result$getPersonByUsername_resultStandardScheme.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/thrift/generated/PersonService$getPersonByUsername_result$getPersonByUsername_resultStandardSchemeFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/thrift/generated/PersonService$getPersonByUsername_result$getPersonByUsername_resultTupleScheme.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/thrift/generated/PersonService$getPersonByUsername_result$getPersonByUsername_resultTupleSchemeFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/thrift/generated/PersonService$getPersonByUsername_result.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/thrift/generated/PersonService$savePerson_args$_Fields.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/thrift/generated/PersonService$savePerson_args$savePerson_argsStandardScheme.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/thrift/generated/PersonService$savePerson_args$savePerson_argsStandardSchemeFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/thrift/generated/PersonService$savePerson_args$savePerson_argsTupleScheme.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/thrift/generated/PersonService$savePerson_args$savePerson_argsTupleSchemeFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/thrift/generated/PersonService$savePerson_args.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/thrift/generated/PersonService$savePerson_result$_Fields.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/thrift/generated/PersonService$savePerson_result$savePerson_resultStandardScheme.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/thrift/generated/PersonService$savePerson_result$savePerson_resultStandardSchemeFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/thrift/generated/PersonService$savePerson_result$savePerson_resultTupleScheme.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/thrift/generated/PersonService$savePerson_result$savePerson_resultTupleSchemeFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/thrift/generated/PersonService$savePerson_result.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/thrift/generated/PersonService.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +173,13 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="userSettingsFile" value="$USER_HOME$/.m2/settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="2M2OguBJ5dVj8HjALwqDRLYQSpW" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -58,6 +198,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -67,7 +208,7 @@
       <recent name="com.resource.initializer" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.RightWayStopThreadWithoutSleepWithInterrupt">
+  <component name="RunManager" selected="Spring Boot.SpringbootstartApplication">
     <configuration name="ExchangeNum" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.resource.initializer.ExchangeNum" />
       <module name="SpringBootCore" />
@@ -120,6 +261,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SpringbootstartApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="SpringBootCore" />
       <extension name="coverage">
@@ -137,11 +289,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.SpringbootstartApplication" />
         <item itemvalue="Application.RightWayStopThreadWithoutSleepWithInterrupt" />
         <item itemvalue="Application.RightWayStopThreadWithoutSleep" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.ExchangeNum" />
-        <item itemvalue="Spring Boot.SpringbootstartApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -162,6 +314,7 @@
       <workItem from="1679016369230" duration="80000" />
       <workItem from="1679209280086" duration="3768000" />
       <workItem from="1681261829858" duration="599000" />
+      <workItem from="1682511757754" duration="4293000" />
     </task>
     <task id="LOCAL-00001" summary="监听">
       <created>1677138114944</created>
@@ -170,7 +323,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677138114944</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="监听">
+      <created>1682511811336</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1682511811336</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

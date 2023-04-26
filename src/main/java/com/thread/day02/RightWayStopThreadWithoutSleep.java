@@ -25,6 +25,7 @@ public class RightWayStopThreadWithoutSleep implements Runnable{
 
     private static String test(){
         System.out.println();
+        return null;
     }
 }
 
