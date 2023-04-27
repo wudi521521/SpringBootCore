@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="375689a0-f82a-4b39-8da8-cdc0223c5d93" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/doker_build.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/doker_build.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -54,12 +55,13 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.github/workflows" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/.github/workflows" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -172,7 +174,7 @@
       <workItem from="1679016369230" duration="80000" />
       <workItem from="1679209280086" duration="3768000" />
       <workItem from="1681261829858" duration="599000" />
-      <workItem from="1682511757754" duration="10561000" />
+      <workItem from="1682511757754" duration="12502000" />
     </task>
     <task id="LOCAL-00001" summary="监听">
       <created>1677138114944</created>
@@ -202,7 +204,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682586791825</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="添加dockerfile和启动脚">
+      <created>1682588112664</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1682588112664</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,7 +220,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="监听" />
     <MESSAGE value="添加dockerfile和启动脚本" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加dockerfile和启动脚本" />
+    <MESSAGE value="添加dockerfile和启动脚" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加dockerfile和启动脚" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

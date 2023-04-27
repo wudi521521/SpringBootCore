@@ -33,14 +33,13 @@ jobs:
   # See also https://docs.docker.com/docker-hub/builds/
   push:
     # 如果需要在构建前进行测试的话需要取消下面的注释和上面对应的 test 动作的注释。
-    # needs: test
-
+    # needs: testf
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
         # 构建镜像，指定镜像名
       - name: Build image
-        run: docker build . --file Dockerfile --tag $IMAGE_NAME
+        #run: docker build . --file Dockerfile --tag $IMAGE_NAME
         # 登录到 dockerhub，使用 GitHub secrets 传入账号密码，密码被加密存储在 GitHub 服务器，添加方法见下图。
       - name: Log into registry
         run: echo "${{ secrets.ACCESS_TOKEN }}" | docker login -u libra146 --password-stdin
