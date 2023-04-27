@@ -27,4 +27,4 @@ jobs:
         with:
           push: true
           platforms: linux/amd64,linux/arm64
-          tags: xiaopeng163/flask-redis:latest
+          tags: 16601154299/flask-redis:latest
